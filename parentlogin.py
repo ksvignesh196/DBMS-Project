@@ -6,7 +6,6 @@ import pymysql
 import pandas
 
 
-# functions
 def clock():
     global date
     global currtime
@@ -33,7 +32,7 @@ def slider():
 
 def search_student():
     def search_data():
-        con = pymysql.connect(host='localhost', user='root', passwd='pa$$w0rd', database='schoolmanagementsystem')
+        con = pymysql.connect(host='localhost', user='root', passwd='root', database='schoolmanagementsystem')
         cur = con.cursor()
         db = 'select * from student where id=%s or name=%s or Mobile_no =%s '
         cur.execute(db, (identry.get(), nameentry.get(), Mobentry.get()))
